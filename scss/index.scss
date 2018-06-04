@@ -1,0 +1,42 @@
+// @import './_utils.scss';
+@import '@material/theme/mdc-theme';
+
+$allModules: ('button', 'card', 'dialog');
+
+// $mdc-theme-config: () !default;
+
+
+@each $name, $theme in $mdc-theme-config {
+  @if map-get($theme, 'primary') == true {
+    $mdc-theme-primary: map-get($theme, 'color');
+    $mdc-theme-on-primary: map-get($theme, 'on-color');
+    $mdc-theme-on-surface: $mdc-theme-primary;
+  }
+  @if map-get($theme, 'secondary') == true {
+    $mdc-theme-secondary: map-get($theme, 'color');
+    $mdc-theme-on-secondary: map-get($theme, 'on-color');
+  }
+}
+
+@mixin mdc-build($modules: $allModules) {
+  @if index($modules, 'button') != false {
+    @include mdc-build-button($mdc-theme-config);
+  }
+}
+
+// primary: yellow;
+
+// @warn $mdc-theme-primary;
+
+
+
+@import './_button.scss';
+@import './_card.scss';
+@import './_form-field.scss';
+@import './_dialog.scss';
+@import './_list.scss';
+@import './_menu.scss';
+@import './_text-field.scss';
+@import './_typography.scss';
+@import './_checkbox.scss';
+@import './_select.scss';

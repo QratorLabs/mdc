@@ -1,0 +1,12 @@
+@import '@material/checkbox/mdc-checkbox';
+
+.mdc-checkbox {
+  --mdc-ripple-left: 8px !important;
+  --mdc-ripple-top: 8px !important;
+  --mdc-ripple-fg-size: 24px !important;
+  --mdc-ripple-fg-scale: 1.66667 !important;
+
+  &--error {
+    color: $mdc-text-field-error;
+  }
+}

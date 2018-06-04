@@ -1,0 +1,29 @@
+@import '@material/textfield/mdc-text-field';
+// @import '@material/textfield/icon/mdc-text-field-icon';
+
+.mdc-text-field {
+  &--expand {
+    width: 100%;
+  }
+
+  .mdc-text-field__icon {
+    pointer-events: all;
+
+    .mdc-text-field__icon {
+      position: initial;
+    }
+  }
+}
+
+.mdc-text-field--textarea {
+  .mdc-text-field__input {
+    height: auto;
+  }
+  .mdc-floating-label {
+    right: 0;
+  }
+}
+
+
+
+// @warn mdc-theme-prop-value(primary);

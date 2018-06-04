@@ -1,0 +1,32 @@
+@import '@material/dialog/mdc-dialog';
+
+.mdc-dialog {
+  pointer-events: none;
+
+  &--open {
+    pointer-events: initial;
+  }
+}
+
+.mdc-dialog {
+  &__surface {
+    max-height: 100%;
+  }
+
+  &__body--scrollable {
+    max-height: 100%;
+    box-sizing: border-box;
+    border: none
+  }
+
+  &--top {
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 20px 0;
+
+    @media(max-height: 500px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }  
+}

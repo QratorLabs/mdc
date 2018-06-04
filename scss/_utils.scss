@@ -1,0 +1,4 @@
+@function contains($list, $var) {
+  @warn($list);
+  @return (false == index($list, $var));
+}

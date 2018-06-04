@@ -1,0 +1,9 @@
+@import '@material/menu/mdc-menu';
+
+.mdc-menu {
+  &--no-padding {
+    .mdc-menu__items {
+      padding: 0;
+    }
+  }
+}

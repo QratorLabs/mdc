@@ -1,0 +1,23 @@
+@import '@material/list/mdc-list';
+
+.mdc-list--multiple-lines .mdc-list-item {
+  height: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  &__text {
+    white-space: initial;
+  }
+}
+
+.mdc-list .mdc-list-item {
+  .mdc-list-item__meta--show-on-hover {
+    opacity: 0;
+  }
+
+  &:hover {
+    .mdc-list-item__meta {
+      opacity: 1;
+    }
+  }
+}
